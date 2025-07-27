@@ -7,7 +7,7 @@ import {
   Skills,
   CoffeeChat,
 } from "../../Components";
-import Websites from "../../components/Websites/Websites";
+// import Websites from "../../components/Websites/Websites";
 
 function Portfolio() {
   return (

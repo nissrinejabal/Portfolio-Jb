@@ -65,16 +65,20 @@ function Main() {
                   </div>
                   <div className="project-card__content">
                     <div className="project-card__info">
-                      <h2 className="project-card__title">{project.projectTitle}</h2>
+                      <h2 className="project-card__title">
+                        {project.projectTitle}
+                      </h2>
                       <p className="project-card__tech">{project.language}</p>
-                      <p className="project-card__desc">{project.projectDescription}</p>
+                      <p className="project-card__desc">
+                        {project.projectDescription}
+                      </p>
                     </div>
 
                     <div className="project-card__links">
                       <div className="project-card__social">
-                        <a 
-                          href={project.liveUrl} 
-                          target="_blank" 
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
                           rel="noreferrer"
                           className="project-card__link"
                           aria-label="View live site"
@@ -91,7 +95,11 @@ function Main() {
                           <TiSocialGithubCircular />
                         </a>
                       </div>
-                      <a className="project-card__more" href="#" aria-label="Learn more">
+                      <a
+                        className="project-card__more"
+                        href="#"
+                        aria-label="Learn more"
+                      >
                         More <TiArrowRight />
                       </a>
                     </div>

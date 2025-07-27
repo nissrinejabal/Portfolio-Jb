@@ -30,7 +30,8 @@
   --ff-heading: var(--ff-primary);
 
   --fw-regular: 400;
-  --fw-semi-bold: 500;
+  --fw-demi-bold: 500;
+  --fw-semi-bold: 600;
   --fw-bold: 700;
 
   --fs-300: 0.8125rem;
@@ -327,7 +328,7 @@ h1 {
 h2 {
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   color: var(--text-secondary);
-  font-weight: var(--fw-semi-bold);
+  font-weight: var(--fw-demi-bold);
   line-height: 1.6;
   margin-bottom: var(--size-200);
 }
@@ -423,7 +424,7 @@ h2 {
 
   // Subtle glow effect
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: -1px;
     border-radius: inherit;
@@ -433,8 +434,7 @@ h2 {
       rgba(255, 255, 255, 0.3) 0%,
       transparent 50%
     );
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -452,7 +452,7 @@ h2 {
       rgba(118, 17, 166, 0.95) 0%,
       rgba(91, 46, 145, 0.95) 100%
     );
-    
+
     &::before {
       background: linear-gradient(
         135deg,
@@ -474,8 +474,6 @@ h2 {
     }
   }
 }
-
-
 
 .hero-section-footer-skills {
   z-index: 1;

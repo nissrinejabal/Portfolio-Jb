@@ -3,10 +3,54 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--size-700);
-  padding: var(--size-900) var(--size-400);
+  // padding: var(--size-900) var(--size-400);
   min-height: 90vh;
   position: relative;
   overflow: hidden;
+
+  .animation-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+
+    .annimation-banner {
+      width: 100%;
+      height: auto;
+      min-height: 400px;
+      max-height: 600px;
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    @media (max-width: 48em) {
+      max-width: 400px;
+      margin-top: 2rem;
+
+      .annimation-banner {
+        min-height: 300px;
+        transform: scale(1.1);
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    @media (max-width: 30em) {
+      max-width: 300px;
+
+      .annimation-banner {
+        min-height: 250px;
+      }
+    }
+  }
 
   /* Large Desktop and High-res Screens (≤1200px) */
   @media (max-width: 75em) {
@@ -29,7 +73,7 @@
 }
 
 .profile-section {
-  flex: 1;
+  // flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--size-600);
@@ -110,7 +154,7 @@
 }
 
 .animation-container {
-  flex: 1;
+  // flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +181,7 @@
 
 .annimation-banner {
   width: 100%;
-  height: clamp(300px, 60vw, 450px);
+  height: clamp(300px, 768px, 450px);
   max-width: 600px;
   transition: all 0.5s ease;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
