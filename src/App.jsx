@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Home from "../src/pages/Home/Home";
 import About from "../src/pages/About/About";
 // import Portfolio from "../src/pages/Portfolio/Portfolio";
-import Portfolio from "./pages/Portfolio/Portfolio";
+import Portfolio from "../src/pages/Portfolio/Portfolio";
 import "./App.scss";
 
 function App() {
