@@ -63,17 +63,19 @@ function Main() {
                   <div className="project-card__image">
                     <img src={project.imgPath} alt={project.projectTitle} />
                   </div>
+
                   <div className="project-card__content">
-                    <div className="project-card__info">
+                    <div className="project-card__header">
                       <h2 className="project-card__title">
                         {project.projectTitle}
                       </h2>
+                    </div>
+                    <div className="project-card__info">
                       <p className="project-card__tech">{project.language}</p>
                       <p className="project-card__desc">
                         {project.projectDescription}
                       </p>
                     </div>
-
                     <div className="project-card__links">
                       <div className="project-card__social">
                         <a
@@ -97,7 +99,7 @@ function Main() {
                       </div>
                       <a
                         className="project-card__more"
-                        href="#"
+                        href="http://localhost:5173/Portfolio"
                         aria-label="Learn more"
                       >
                         More <TiArrowRight />

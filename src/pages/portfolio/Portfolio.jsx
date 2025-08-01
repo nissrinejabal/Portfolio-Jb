@@ -6,31 +6,29 @@ import {
   ServicesSection,
   Skills,
   CoffeeChat,
+  ServicesSectionEducation,
 } from "../../Components";
+import Lottie from "lottie-react";
 // import Websites from "../../components/Websites/Websites";
-
+import reactAnimation from "../../assets/annimation/costume-animation.json";
 function Portfolio() {
   return (
     <div className="portfolio-page">
       <div className="hero-section-wrapper">
         <Header />
-        <div className="container padding-block-900 margin-top-900">
-          <div className="contentfolio">
-            <h1 className="fs-primary-heading fw-bold text-center">
-              My Portfolio
-            </h1>
-            {/* <p className="text-center services-subtitle">
-              My portfolio showcases a selection of my projects, highlighting my
-              skills in web development, UI/UX design, and API integration. Each
-              project reflects my commitment to quality and innovation,
-              demonstrating my ability to create impactful digital solutions.
-            </p> */}
-          </div>
+        <div className="portfolio-animation-wrapper">
+          <Lottie
+            animationData={reactAnimation}
+            loop={true}
+            className="about-me__lottie"
+          />
+          <div className="portfolio-connector-line"></div>
         </div>
+        <div className="container padding-block-900 margin-top-900"></div>
       </div>
-
-    
-      
+      <div className="portfolio-education-wrapper">
+        <ServicesSectionEducation />
+      </div>
       <ServicesSection />
       <div className="padding-block-900">
         <Skills />

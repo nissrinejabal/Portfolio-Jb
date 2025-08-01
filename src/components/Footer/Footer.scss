@@ -41,17 +41,17 @@
   position: relative;
   overflow: hidden;
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     background-color: red;
-//     inset: 0;
-//     background: url("../../assets/pictures/footer/bg-footer-light-800w.jpg");
-//     background-size: cover;
-//     background-position: center;
-//     opacity: 0.1;
-//     z-index: 0;
-//   }
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     background-color: red;
+  //     inset: 0;
+  //     background: url("../../assets/pictures/footer/bg-footer-light-800w.jpg");
+  //     background-size: cover;
+  //     background-position: center;
+  //     opacity: 0.1;
+  //     z-index: 0;
+  //   }
 
   .container {
     position: relative;
@@ -187,6 +187,10 @@
   .footer__bottom {
     position: relative;
     text-align: center;
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .footer__separator {

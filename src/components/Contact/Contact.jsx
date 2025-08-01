@@ -8,14 +8,20 @@ import { TiContacts } from "react-icons/ti";
 import { Toaster, toast } from 'react-hot-toast';
 
 
-const Contact = () => {  const [state, handleSubmit] = useForm("mwpojzjo"); // Formspree form ID
+const Contact = () => {
+  const [state, handleSubmit] = useForm("xovlwlea"); // Formspree form ID
 
-  if (state.succeeded) {
-    toast.success('Message sent successfully!', {
-      duration: 4000,
-      position: 'top-right',
-    });
-  }
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    await handleSubmit(e);
+    if (!state.errors) {
+      e.target.reset(); // Reset form fields
+      toast.success('Message sent successfully!', {
+        duration: 4000,
+        position: 'top-right',
+      });
+    }
+  };
 
   return (
     <section className="contact-section">
@@ -42,7 +48,7 @@ const Contact = () => {  const [state, handleSubmit] = useForm("mwpojzjo"); // F
 
           <div className="contact-right">
             <motion.form
-              onSubmit={handleSubmit}
+              onSubmit={handleFormSubmit}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}

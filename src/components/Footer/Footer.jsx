@@ -9,7 +9,7 @@ import {
   TiArrowUp,
 } from "react-icons/ti";
 import { motion } from "framer-motion";
-import logo from "../../assets/pictures/Header/logo.png";
+import logo2 from "../../assets/pictures/Header/logo2.png";
 
 const Footer = () => {  return (
     <footer className="footer">
@@ -30,7 +30,7 @@ const Footer = () => {  return (
             <div className="footer__left">
               <Link to="/" className="footer__logo-link">
                 <motion.img 
-                  src={logo} 
+                  src={logo2} 
                   alt="Logo" 
                   className="footer__logo"
                   whileHover={{ scale: 1.1, rotate: 360 }}
@@ -67,11 +67,9 @@ const Footer = () => {  return (
                 <motion.li whileHover={{ x: 5 }}>
                   <Link to="/About">About</Link>
                 </motion.li>
+                
                 <motion.li whileHover={{ x: 5 }}>
-                  <Link to="/portfolio">Projects</Link>
-                </motion.li>
-                <motion.li whileHover={{ x: 5 }}>
-                  <Link to="/#contact">Contact</Link>
+                  <Link to="/Portfolio">Portfolio</Link>
                 </motion.li>
               </motion.ul>
             </nav>
@@ -106,7 +104,7 @@ const Footer = () => {  return (
                   <TiSocialLinkedinCircular />
                 </motion.a>
                 <motion.a
-                  href="mailto:your.email@example.com"
+                  href="mailto:nissrinejabalpro@gmail.com"
                   aria-label="Send Email"
                   whileHover={{ y: -5, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400 }}

@@ -1,32 +1,33 @@
 export const myProjects = [
   {
-    projectTitle: "So’Kiff – E-commerce",
+    projectTitle: "Amazona – E-commerce",
     Category: ["react", "Jsx", "Scss"],
-    language: "React.js , Jsx , Scss",
+    language:
+      "React.js , Jsx , Scss,API REST,Express.js,mongoDB, routeur, Axios.",
     projectDescription:
-      "Développement de l’interface e-commerce avec Vue.js . Collaboration étroite avec l’équipe back-end pour la gestion des données.",
+      "Réalisation d'une application E-commerce similaire à Amazon utilisant React, MongoDB et Express avec gestion avancée des produits.",
     imgPath: "/src/assets/pictures/Projects/project1.png",
-    liveUrl: "https://www.google.com/",
-    githubUrl : "https://www.google.com/"
+    liveUrl: "https://github.com/nissrinejabal/amazona",
+    githubUrl: "https://github.com/nissrinejabal/amazona",
   },
   {
-    projectTitle: "Scss Project",
-    Category: ["bootstrap"],
-    language: " GuestWaiter – Restaurant Management",
-    projectDescription:
-      "Site de commande en ligne pour la gestion de commandes en restauration. Conception de composants modulaires (menus, utilisateurs, commandes), responsive multi-device. synchronisation avec les flux du back-end.",
-    imgPath: "/src/assets/pictures/Projects/project2.png",
-    liveUrl: "https://www.google.com/",
-    githubUrl : "https://www.google.com/" 
-  },
-  {
-    projectTitle: "Vue JS Project",
-    Category: ["vuejs", "Jsx", "Scss"],
-    language: "LivCollect – Livraison de repas",
+    projectTitle: "LivCollect",
+    Category: ["vuejs", "bootstrap", "Scss"],
+    language: "Vue.js, Scss, Redux, Bootstrap, Tailwind CSS, API, Axios.",
     projectDescription:
       "Site de commande en ligne pour un restaurant, Intégration d’interfaces dynamiques à partir de maquettes, les performances et la modularité du code. Coordination avec les développeurs back-end",
+    imgPath: "/src/assets/pictures/Projects/project2.png",
+    liveUrl: "https://livcollect.com/",
+    githubUrl: "https://livcollect.com/",
+  },
+  {
+    projectTitle: "yvonnemoreau magnetiseuse",
+    Category: ["bootstrap", "", "CSS"],
+    language: "HTML, CSS,Bootstrap,jQuery  jQuery, SEO,Firebase.",
+    projectDescription:
+      "Site vitrine pour une praticienne en magnétisme. Intégration complète du contenu, optimisation responsive et amélioration du référencement naturel (SEO).",
     imgPath: "/src/assets/pictures/Projects/project3.png",
-    liveUrl: "https://www.google.com/",
-    githubUrl : "https://www.google.com/"
+    liveUrl: "https://yvonnemoreau-magnetiseuse.fr/",
+    githubUrl: "https://yvonnemoreau-magnetiseuse.fr/",
   },
 ];

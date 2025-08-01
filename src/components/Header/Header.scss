@@ -30,6 +30,9 @@
       -webkit-text-fill-color: transparent;
       font-weight: var(--fw-demi-bold);
       text-transform: uppercase;
+      @media (max-width: 48em) {
+        font-size: var(--fs-400);
+      }
     }
   }
 

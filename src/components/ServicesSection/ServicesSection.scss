@@ -1,3 +1,7 @@
+.service-desc-line {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
 .services-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -12,7 +16,7 @@
   z-index: 1;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0.35rem;
@@ -87,6 +91,7 @@
 }
 
 .service-description {
+  max-width: fit-content;
   font-size: var(--fs-500);
   line-height: 1.6;
   margin: 0;
@@ -106,7 +111,7 @@
   text-transform: capitalize;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -119,7 +124,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -134,8 +139,6 @@
 
 // Dark mode styles
 .dark {
- 
-
   .service-item {
     &:hover {
       background: rgba(118, 17, 166, 0.1);
