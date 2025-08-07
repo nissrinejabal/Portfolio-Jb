@@ -1,0 +1,213 @@
+@keyframes menuBounce {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+// Header
+
+.nav-wrapper-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  gap: 1rem;
+  .logo-link {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    p {
+      line-height: 1.1;
+      background: linear-gradient(45deg, var(--purple) 0%, #000000 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: var(--fw-demi-bold);
+      text-transform: uppercase;
+      @media (max-width: 48em) {
+        font-size: var(--fs-400);
+      }
+    }
+  }
+
+  .dark & {
+    .logo-link p {
+      background: linear-gradient(45deg, var(--purple) 0%, var(--white) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .header__logo {
+    width: var(--size-600);
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .button-wraper {
+    border: 2px solid var(--purple-light);
+    color: var(--purple-light);
+    cursor: pointer;
+    border-radius: 100vmax;
+    padding: var(--size-200);
+    &:hover {
+      color: var(--white);
+      background-color: var(--purple-light);
+      border: 2px solid var(--purple-light);
+      border-radius: 2rem;
+    }
+    &:active {
+      scale: 0.99;
+    }
+  }
+  // Menu Button
+  .menu-button {
+    display: none;
+
+    @media (max-width: 48em) {
+      display: block;
+    }
+  }
+  // Navigation
+  .primary-navigation {
+    background-color: var(--white-gray);
+    padding: var(--size-400);
+    box-shadow: 1px 1px 26px var(--gray);
+    border-radius: var(--size-900);
+    @media (max-width: 48em) {
+      display: none;
+    }
+  }
+  .social-list-header {
+    display: flex;
+    align-items: center;
+  }
+}
+.dark .primary-navigation {
+  background-color: var(--dark-mode);
+}
+
+// Navigation List
+.nav-list {
+  display: flex;
+  gap: clamp(var(--size-200), 5vw, var(--size-200));
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-nav);
+
+  a {
+    &:hover,
+    &.active {
+      color: var(--light-mode);
+      background-color: var(--purple-light);
+      border-radius: 2rem;
+    }
+  }
+
+  @media (max-width: 48em) {
+    display: grid;
+    gap: var(--size-600);
+    text-align: center;
+  }
+}
+
+// Modal
+.menu__modal {
+  backdrop-filter: blur(5px);
+  background: rgb(65 55 110 / 52%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+
+  ul {
+    animation: menuBounce 0.5s ease;
+    margin: 2rem auto 0;
+    border-radius: 2rem;
+    padding: var(--size-400) var(--size-600);
+    width: 85%;
+    background: #05064791;
+
+    li {
+      padding: 1rem;
+      border-bottom: 1px solid var(--clr-primary-pink);
+      a {
+        color: var(--white-gray);
+        position: relative;
+        transition: color 0.3s ease;
+        padding: 0.3rem 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--purple-light);
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          color: var(--light-mode);
+
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+
+        &.active {
+          color: var(--light-mode);
+
+          &::after {
+            transform: scaleX(1);
+            background-color: var(--purple-light);
+            height: 2.5px;
+          }
+        }
+      }
+    }
+
+    li:first-child {
+      border: none;
+      font-size: var(--fs-600);
+      text-align: right;
+      padding: var(--size-100);
+    }
+
+    li:last-child {
+      border: none;
+      font-size: var(--fs-600);
+    }
+  }
+}
+.dark .menu__modal ul {
+  background: var(--light-mode);
+  a {
+    color: var(--gray);
+  }
+}
+
+// Icons
+.menu-icon-menu,
+.menu-icon-moon,
+.menu-icon-close {
+  ////////////////////////////////////////////////////
+  transition: 0.3s;
+}
+
+.menu-icon-close:hover {
+  font-size: var(--fs-bigbutton);
+  rotate: 180deg;
+}

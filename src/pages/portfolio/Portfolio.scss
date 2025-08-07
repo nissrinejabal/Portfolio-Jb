@@ -1,0 +1,106 @@
+.portfolio-animation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.portfolio-connector-line {
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(180deg, #6366f1 0%, #a5b4fc 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.12);
+  animation: connectorGrow 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.portfolio-education-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes connectorGrow {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 60px;
+    opacity: 1;
+  }
+}
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 2rem 0;
+  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.10);
+  padding: 2.5rem 2rem;
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  transition: box-shadow 0.3s;
+}
+.contact-card:hover {
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.18);
+}
+.contact-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3730a3;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-item {
+  margin-bottom: 1rem;
+  font-size: 1.08rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.contact-label {
+  font-weight: 600;
+  color: #6366f1;
+  margin-right: 0.5rem;
+}
+.contact-value {
+  color: #312e81;
+}
+.contact-link {
+  color: #3730a3;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-left: 0.3rem;
+  transition: color 0.2s;
+}
+.contact-link:hover {
+  color: #6366f1;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.background-cover {
+  background-size: cover;
+}
